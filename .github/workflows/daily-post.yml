@@ -1,0 +1,28 @@
+name: Daily TikTok Post
+
+on:
+  schedule:
+    - cron: "15 14 * * *"   # ~9:15am America/Chicago
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Post next ready video
+        env:
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+        run: python post_to_tiktok.py
+      - name: Commit updated content state
+        run: |
+          git config user.name "content-bot"
+          git config user.email "content-bot@users.noreply.github.com"
+          git add content_pending content_posted 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: mark video as posted [skip ci]"
+          git push

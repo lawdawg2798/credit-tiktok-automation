@@ -1,0 +1,21 @@
+{
+  "video_id": "4dc40ad2",
+  "created_at": "2026-08-06T02:37:43.379459+00:00",
+  "topic": "authorized_user_strategy",
+  "structure_id": "hook_setup_mistake_fix_result",
+  "beats": {
+    "hook": "I went from a 581 credit score to a 714 in just four months \u2014 and I didn't open a single new account.",
+    "setup": "I was 24, trying to rent my first apartment on my own. My credit history was only 11 months old, and my one card had a 73% utilization rate. I kept getting denied.",
+    "mistake": "A friend told me to just open more cards to fix it. So I applied for three new cards in six weeks. That gave me four hard inquiries and dropped my average account age to basically zero. My score actually fell to 566 after that.",
+    "fix": "I stopped applying cold turkey. Then I asked my mom if she'd add me as an authorized user on her oldest card \u2014 a 12-year-old account with a $8,500 limit and zero balance. She added me in one phone call. I didn't even need to carry the card. I also paid my own card down from $1,460 to under $200 over three months.",
+    "result": "Four months later, my score hit 714. That was enough to get approved for my apartment without a co-signer.",
+    "cta": "If you're working on your credit, follow for more real strategies like this one."
+  },
+  "voice_profile": "voice_a",
+  "caption_style": "clean_white_center",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 58,
+  "status": "video_ready",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/4dc40ad2_final.mp4"
+}

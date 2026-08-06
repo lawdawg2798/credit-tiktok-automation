@@ -25,18 +25,31 @@ PENDING_DIR = ROOT / "content_pending"
 HISTORY_PATH = ROOT / "recent_history.json"
 
 STRUCTURE_PROMPTS = {
-    "hook": "A 1-2 sentence hook with a specific shocking number or claim.",
-    "setup": "2-3 sentences establishing who the person is and their situation.",
-    "mistake": "2-4 sentences on the specific decision/mistake, with concrete numbers.",
-    "fix": "3-5 sentences on exactly what they did to fix it, step by step.",
-    "result": "1-2 sentences on the outcome, with a number and timeframe.",
-    "result_teaser": "1 sentence teasing the end result before explaining how.",
-    "flashback_setup": "2-3 sentences setting the scene before the result.",
-    "lesson": "1-2 sentence clear takeaway.",
-    "three_things_learned": "Three short numbered lessons, punchy, 1 sentence each.",
-    "advice": "1-2 sentences of direct, concrete advice.",
-    "one_line_story_proof": "One sentence of real-feeling anecdotal proof.",
-    "cta": "One short soft call-to-action line (follow / comment), no hard sell.",
+    # Openers / hooks
+    "hook": "A punchy 1-2 sentence hook that drops the audience into the drama and makes them NEED to hear what happens. No slow warmup.",
+    "ending_teaser": "1 sentence teasing the wild outcome up front, before explaining how it happened.",
+    "result_teaser": "1 sentence teasing the payoff before the story.",
+    # Setup / context
+    "setup": "2-3 sentences establishing who's involved and the situation, fast.",
+    "backstory": "2-3 sentences of just-enough context to understand the conflict.",
+    "normal_life": "2 sentences showing how things seemed normal/fine at first.",
+    "flashback_setup": "2-3 sentences setting the scene before the payoff.",
+    # Rising action
+    "incident": "2-4 sentences on the specific thing that kicked it all off.",
+    "first_red_flag": "2-3 sentences on the first sign something was wrong.",
+    "the_wrong": "2-3 sentences on how someone got wronged/crossed a line.",
+    "the_plan": "2-3 sentences on the plan that formed in response.",
+    # Escalation / turns
+    "escalation": "2-4 sentences where it gets worse, more tense, or takes a turn.",
+    "the_reveal": "2-3 sentences delivering the big twist or reveal.",
+    "the_execution": "2-4 sentences on how the plan/payback went down, with vivid detail.",
+    # Payoff / resolution
+    "payoff": "2-3 sentences delivering the satisfying or shocking result.",
+    "the_satisfaction": "2-3 sentences on the satisfying aftermath and how it felt.",
+    "resolution": "2-3 sentences wrapping up how it ended.",
+    "aftermath": "2-3 sentences on what happened after the dust settled.",
+    # Close
+    "cta": "One short natural call-to-action (follow for more stories / comment what you'd do). No hard sell.",
 }
 
 
@@ -66,20 +79,33 @@ def build_prompt(topic, structure):
     beats = "\n".join(
         f"- {beat.upper()}: {STRUCTURE_PROMPTS[beat]}" for beat in structure["order"]
     )
-    return f"""Write a short-form vertical video script about: {topic.replace('_', ' ')}.
+    theme = topic.replace('_', ' ')
+    return f"""Write a short-form vertical video script for a faceless "Reddit stories"
+style TikTok. The story theme is: {theme}.
 
-This is a real-feeling first-person credit story (can be a composite/illustrative
-scenario - do not claim it is a specific real named person). Follow this exact
-beat order and label each beat clearly on its own line as "BEAT_NAME: text":
+Write it as a gripping, first-person dramatic story in the voice of an
+ordinary person retelling something that happened to them. It should feel
+like a real Reddit post being read aloud -- specific, vivid, emotionally
+charged, with a clear hook and a satisfying or shocking payoff. Invent a
+plausible, self-contained story (it is fictional/illustrative -- do not use
+real named public figures or claim it is a specific real person).
+
+Follow this exact beat order and label each beat clearly on its own line as
+"BEAT_NAME: text":
 
 {beats}
 
 Rules:
-- Total spoken script should read aloud in 55-95 seconds (roughly 140-220 words).
-- Concrete numbers only (scores, dollar amounts, months/years) - no vague claims.
-- No guaranteed outcomes ("guaranteed to raise your score") - describe what
-  happened, don't promise results to the viewer.
-- Conversational spoken tone, short sentences, no hashtags in the script itself.
+- Total spoken script should read aloud in 55-95 seconds (roughly 150-230 words).
+- Open with a hook that creates instant curiosity -- no slow throat-clearing.
+- Use concrete, specific details (names for side characters are fine, places,
+  amounts, timeframes) so it feels real, not generic.
+- Build tension and pay it off. The ending should land -- satisfying revenge,
+  a shocking twist, or a gut-punch, depending on the theme.
+- Keep it PG-13: dramatic and intense is great, but no graphic gore, explicit
+  sexual content, or slurs.
+- Conversational spoken tone, short punchy sentences, no hashtags or emojis in
+  the script text itself.
 """
 
 

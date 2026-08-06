@@ -144,7 +144,7 @@ def main():
         print(f"Assembling {record['video_id']} (style={record['caption_style']})")
         try:
             background_path = pick_background(record["caption_style"])
-            audio_path = Path(record["audio_path"])
+            audio_path = PENDING_DIR / f"{record['video_id']}_voiceover.mp3"
             srt_path = PENDING_DIR / f"{record['video_id']}_captions.srt"
             out_path = PENDING_DIR / f"{record['video_id']}_final.mp4"
 

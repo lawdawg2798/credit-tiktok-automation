@@ -16,7 +16,8 @@
   "background_category": "soft_ambient_b_roll",
   "music_category": "low_key_lofi",
   "target_length_seconds": 95,
-  "status": "voiceover_ready",
+  "status": "video_ready",
   "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/279771ec_voiceover.mp3",
-  "error": "[Errno 2] No such file or directory: 'ffprobe'"
+  "error": "[Errno 2] No such file or directory: 'ffprobe'",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/279771ec_final.mp4"
 }

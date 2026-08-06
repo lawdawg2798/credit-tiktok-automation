@@ -1,0 +1,22 @@
+{
+  "video_id": "a6f763dd",
+  "created_at": "2026-08-06T06:46:33.052190+00:00",
+  "topic": "store_card_trap",
+  "structure_id": "hook_setup_mistake_fix_result",
+  "beats": {
+    "hook": "I signed up for a store card at checkout and it quietly destroyed 11% of my available credit overnight.",
+    "setup": "I was 24, had a decent 680 credit score, and thought I was being smart building credit history. I had two existing cards with a combined $6,000 limit and almost no balances.",
+    "mistake": "The cashier said I'd save 20% on a $180 purchase, so I signed up on the spot. The store card came back with a $300 limit. That tiny limit meant even a $90 balance put me at 30% utilization on that card alone. My score dropped 34 points inside 60 days because of the hard inquiry plus that high utilization ratio hitting at the same time.",
+    "fix": "First, I paid that $90 balance completely within the next billing cycle. Then I called my existing card issuer and requested a credit limit increase, which bumped my total available credit from $6,300 to $9,300. I also set a $25 autopay on the store card so it always showed a tiny balance rather than zero or a spike.",
+    "result": "Within 5 months my score recovered to 694, and six months after that I was sitting at 711.",
+    "cta": "If this sounds familiar, drop your situation in the comments and I'll try to help."
+  },
+  "voice_profile": "voice_b",
+  "caption_style": "bold_yellow_bottom",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/a6f763dd_voiceover.mp3",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/a6f763dd_final.mp4"
+}

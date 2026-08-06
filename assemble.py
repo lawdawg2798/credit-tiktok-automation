@@ -78,7 +78,7 @@ def submit_render(record, templates, headers):
         "modifications": {
             "Voiceover.source": script_text,
             "Background.source": background_url,
-            "Caption-Text": script_text,
+            "Captions.text": script_text,
         },
     }
     resp = requests.post(CREATOMATE_URL, headers=headers, json=payload, timeout=30)

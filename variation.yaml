@@ -5,32 +5,44 @@
 # originality-flag risk.
 
 script_structures:
-  # Different narrative orders, not just different words.
-  - id: hook_setup_mistake_fix_result
-    order: [hook, setup, mistake, fix, result, cta]
-  - id: cold_open_result_then_flashback
-    order: [result_teaser, flashback_setup, mistake, fix, lesson, cta]
-  - id: listicle_style
-    order: [hook, three_things_learned, cta]
-  - id: direct_advice_with_story_proof
-    order: [hook, advice, one_line_story_proof, cta]
+  # Different narrative arcs for dramatic Reddit-style stories.
+  - id: hook_setup_incident_escalation_payoff
+    order: [hook, setup, incident, escalation, payoff, cta]
+  - id: cold_open_ending_then_how
+    order: [ending_teaser, backstory, incident, escalation, resolution, cta]
+  - id: slow_burn_reveal
+    order: [hook, normal_life, first_red_flag, the_reveal, aftermath, cta]
+  - id: revenge_arc
+    order: [hook, the_wrong, the_plan, the_execution, the_satisfaction, cta]
 
+# Story TYPES, weighted toward the highest-engagement dramatic categories.
+# Each maps to a recognizable Reddit-story flavor.
 topics:
-  - medical_debt_collections
-  - authorized_user_strategy
-  - first_credit_card_mistake
-  - cosigning_gone_wrong
-  - debt_consolidation_reality
-  - utilization_myth_30_percent
-  - collections_dispute_letter
-  - rebuilding_after_bankruptcy
-  - store_card_trap
-  - autopay_failure_story
-  - closing_oldest_card_mistake
-  - credit_freeze_vs_lock
-  - hard_pull_vs_soft_pull
-  - secured_card_graduation
-  - goodwill_letter_success
+  # revenge / malicious compliance (highest completion-rate pull)
+  - petty_revenge_on_bad_boss
+  - malicious_compliance_backfires_on_them
+  - pro_revenge_years_in_making
+  - neighbor_dispute_revenge
+  # relationship / cheating drama (biggest audience)
+  - caught_cheating_plot_twist
+  - wedding_ruined_by_family
+  - found_out_the_truth_too_late
+  - the_ex_who_wouldn_t_let_go
+  - in_laws_crossed_the_line
+  # entitled people / getting humbled
+  - entitled_customer_gets_karma
+  - entitled_parent_at_kids_event
+  - someone_tried_to_scam_me
+  - entitled_neighbor_property_line
+  # unsettling / true-story (retention + follow magnet)
+  - creepy_encounter_that_still_haunts_me
+  - trusted_the_wrong_person
+  - something_was_off_about_them
+  - the_night_everything_changed
+  # workplace / family betrayal
+  - quit_job_no_notice_satisfying
+  - family_secret_finally_exposed
+  - roommate_from_hell
 
 voice_profiles:        # rotate across ElevenLabs (or other TTS) voice IDs
   - name: voice_a

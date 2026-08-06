@@ -4,13 +4,16 @@ assemble.py
 Assembles the final vertical video LOCALLY with ffmpeg -- no Creatomate,
 no per-video cost beyond what you already pay ElevenLabs for the voice.
 
+Captions are written as a proper .ass subtitle file (not .srt + force_style)
+so font size, color, and centering are set natively and reliably. Word
+timing comes from ElevenLabs' real per-character alignment when available
+(zero drift), falling back to a character-weighted estimate otherwise.
+
 Run:  python assemble.py
 """
 import json
 import os
-import random
 import subprocess
-import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -26,14 +29,38 @@ BACKGROUND_FILES = {
 }
 
 CAPTION_STYLES = {
-    "bold_yellow_bottom": {"color": "&H0000D4FF", "alignment": 2, "marginv": 90},
+    "bold_yellow_bottom": {"color": "&H0000D4FF", "alignment": 2, "marginv": 140},
     "clean_white_center": {"color": "&H00FFFFFF", "alignment": 5, "marginv": 0},
-    "outline_center_top": {"color": "&H00FFFFFF", "alignment": 8, "marginv": 90},
+    "outline_center_top": {"color": "&H00FFFFFF", "alignment": 8, "marginv": 140},
 }
 
+FONT_SIZE = 30
+MIN_WORD_DUR = 0.22
 
-def narration_text(record):
-    return " ".join(str(v).strip() for v in record["beats"].values() if str(v).strip())
+
+def words_from_alignment(alignment):
+    chars = alignment["characters"]
+    starts = alignment["character_start_times_seconds"]
+    ends = alignment["character_end_times_seconds"]
+
+    words = []
+    cur_word = ""
+    cur_start = None
+    prev_end = None
+    for ch, s, e in zip(chars, starts, ends):
+        if ch.strip() == "":
+            if cur_word:
+                words.append((cur_word, cur_start, prev_end))
+                cur_word = ""
+                cur_start = None
+            continue
+        if cur_start is None:
+            cur_start = s
+        cur_word += ch
+        prev_end = e
+    if cur_word:
+        words.append((cur_word, cur_start, prev_end))
+    return words
 
 
 def pick_background(caption_style):
@@ -65,51 +92,71 @@ def audio_duration(path):
     return float(result.stdout.strip())
 
 
-def fmt_ts(seconds):
+def fmt_ass_ts(seconds):
     h = int(seconds // 3600)
     m = int((seconds % 3600) // 60)
     s = int(seconds % 60)
-    ms = int((seconds - int(seconds)) * 1000)
-    return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+    cs = int((seconds - int(seconds)) * 100)
+    return f"{h}:{m:02d}:{s:02d}.{cs:02d}"
 
 
-def build_srt(record, total_dur, srt_path):
-    beats = [b for b in record["beats"].values() if str(b).strip()]
-    words = [max(1, len(str(b).split())) for b in beats]
-    total_words = sum(words)
-    lines = []
-    t = 0.0
-    for i, (beat_text, w) in enumerate(zip(beats, words), start=1):
-        dur = total_dur * (w / total_words)
-        start, end = t, t + dur
-        t = end
-        lines.append(str(i))
-        lines.append(f"{fmt_ts(start)} --> {fmt_ts(end)}")
-        lines.append("\n".join(textwrap.wrap(str(beat_text), width=28)))
-        lines.append("")
-    srt_path.write_text("\n".join(lines))
+def word_timings(all_words, total_dur):
+    weights = [max(len(w), 3) for w in all_words]
+    total_weight = sum(weights)
+    raw = [total_dur * (w / total_weight) for w in weights]
+    durs = [max(d, MIN_WORD_DUR) for d in raw]
+    scale = total_dur / sum(durs)
+    return [d * scale for d in durs]
 
 
-def assemble_video(record, background_path, audio_path, srt_path, out_path):
+def build_ass(record, total_dur, ass_path, alignment=None):
     style = CAPTION_STYLES[record["caption_style"]]
-    dur = audio_duration(audio_path)
 
-    ass_style = (
-        "FontName=DejaVu Sans,"
-        "FontSize=16,"
-        f"PrimaryColour={style['color']},"
-        "Bold=1,"
-        f"Alignment={style['alignment']},"
-        f"MarginV={style['marginv']},"
-        "Outline=2,"
-        "BorderStyle=1"
-    )
-    subs_filter = f"subtitles={srt_path}:force_style='{ass_style}'"
+    header = f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: {WIDTH}
+PlayResY: {HEIGHT}
+WrapStyle: 2
+ScaledBorderAndShadow: yes
 
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,{FONT_SIZE},{style['color']},&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,{style['alignment']},20,20,{style['marginv']},1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+"""
+    lines = [header]
+
+    if alignment:
+        for word, start, end in words_from_alignment(alignment):
+            lines.append(
+                f"Dialogue: 0,{fmt_ass_ts(start)},{fmt_ass_ts(end)},Default,,0,0,0,,{word.upper()}"
+            )
+    else:
+        full_text = " ".join(
+            str(b).strip() for b in record["beats"].values() if str(b).strip()
+        )
+        all_words = full_text.split()
+        if all_words:
+            durs = word_timings(all_words, total_dur)
+            t = 0.0
+            for word, d in zip(all_words, durs):
+                start, end = t, t + d
+                t = end
+                lines.append(
+                    f"Dialogue: 0,{fmt_ass_ts(start)},{fmt_ass_ts(end)},Default,,0,0,0,,{word.upper()}"
+                )
+
+    ass_path.write_text("\n".join(lines))
+
+
+def assemble_video(background_path, audio_path, ass_path, out_path, dur):
     scale_crop = (
         f"scale={WIDTH}:{HEIGHT}:force_original_aspect_ratio=increase,"
         f"crop={WIDTH}:{HEIGHT}"
     )
+    subs_filter = f"ass={ass_path}"
 
     subprocess.run(
         [
@@ -145,12 +192,22 @@ def main():
         try:
             background_path = pick_background(record["caption_style"])
             audio_path = PENDING_DIR / f"{record['video_id']}_voiceover.mp3"
-            srt_path = PENDING_DIR / f"{record['video_id']}_captions.srt"
+            ass_path = PENDING_DIR / f"{record['video_id']}_captions.ass"
             out_path = PENDING_DIR / f"{record['video_id']}_final.mp4"
 
             dur = audio_duration(audio_path)
-            build_srt(record, dur, srt_path)
-            assemble_video(record, background_path, audio_path, srt_path, out_path)
+
+            alignment = None
+            alignment_file = record.get("alignment_path")
+            if alignment_file and Path(alignment_file).exists():
+                alignment = json.loads(Path(alignment_file).read_text())
+            else:
+                local_alignment = PENDING_DIR / f"{record['video_id']}_alignment.json"
+                if local_alignment.exists():
+                    alignment = json.loads(local_alignment.read_text())
+
+            build_ass(record, dur, ass_path, alignment=alignment)
+            assemble_video(background_path, audio_path, ass_path, out_path, dur)
 
             record["status"] = "video_ready"
             record["final_video_path"] = str(out_path)

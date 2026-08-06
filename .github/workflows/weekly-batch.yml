@@ -1,8 +1,6 @@
 name: Weekly Content Batch
-
 permissions:
   contents: write
-
 on:
   schedule:
     - cron: "0 15 * * 0"   # Sundays 15:00 UTC
@@ -11,7 +9,6 @@ on:
       count:
         description: "How many videos to generate this run"
         default: "7"
-
 jobs:
   batch:
     runs-on: ubuntu-latest
@@ -35,4 +32,4 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python tts.py
       - name: Assemble videos
-        run: python
+        run: python assemble.py

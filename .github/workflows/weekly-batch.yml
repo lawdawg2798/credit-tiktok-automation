@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Generate scripts
@@ -33,11 +35,4 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python tts.py
       - name: Assemble videos
-        run: python assemble.py
-      - name: Commit new pending content
-        run: |
-          git config user.name "content-bot"
-          git config user.email "content-bot@users.noreply.github.com"
-          git add content_pending recent_history.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: weekly content batch [skip ci]"
-          git push
+        run: python

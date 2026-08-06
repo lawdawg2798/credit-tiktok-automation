@@ -1,0 +1,22 @@
+{
+  "video_id": "279771ec",
+  "created_at": "2026-08-06T05:57:17.872751+00:00",
+  "topic": "secured_card_graduation",
+  "structure_id": "cold_open_result_then_flashback",
+  "beats": {
+    "result_teaser": "After 14 months, my secured card got upgraded to a real unsecured card and I got my $300 deposit back.",
+    "flashback_setup": "I was 24 with a 581 credit score and basically no credit history. I had one medical collection from two years earlier and zero open accounts. I figured a secured card was my only real option.",
+    "mistake": "I opened the secured card, put down my $300 deposit, and then barely used it. Like maybe $8 a month because I thought keeping the balance low meant keeping it near zero. My utilization was fine but my payment history was thin, and I let 8 months go by without asking for a review or doing anything proactive.",
+    "fix": "I started charging exactly $60 to $90 a month, which kept me under 30% utilization on the $300 limit. I set up autopay for the full statement balance so I never missed a payment. At the 12-month mark I called the issuer directly and asked about their graduation criteria. They told me 12 on-time payments qualified me for a review. Two months later, they upgraded my account and refunded my deposit.",
+    "lesson": "A secured card only works if you treat it like a tool, not a backup card you forget about.",
+    "cta": "Follow for more real credit stories, or drop a question in the comments."
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "clean_white_center",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 95,
+  "status": "render_error",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/279771ec_voiceover.mp3",
+  "error": "[Errno 2] No such file or directory: 'ffprobe'"
+}

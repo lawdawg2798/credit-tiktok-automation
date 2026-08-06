@@ -50,7 +50,9 @@ def submit_render(record, templates):
     }
     resp = requests.post(CREATOMATE_URL, headers=headers, json=payload, timeout=30)
     resp.raise_for_status()
-    return resp.json()
+    data = resp.json()
+    # Creatomate's /renders endpoint returns a list even for a single render
+    return data[0] if isinstance(data, list) else data
 def poll_render(render_id, headers, timeout_s=300, interval_s=5):
     url = f"{CREATOMATE_URL}/{render_id}"
     waited = 0

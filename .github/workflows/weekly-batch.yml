@@ -28,9 +28,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python generate_script.py --count ${{ github.event.inputs.count || 7 }}
-      - name: Assemble videos
+      - name: Generate voiceovers
         env:
-          CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python tts.py
+      - name: Assemble videos
         run: python assemble.py
       - name: Commit new pending content
         run: |

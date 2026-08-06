@@ -1,5 +1,8 @@
 name: Weekly Content Batch
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 15 * * 0"   # Sundays 15:00 UTC
@@ -14,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -23,10 +28,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python generate_script.py --count ${{ github.event.inputs.count || 7 }}
-      - name: Generate voiceovers
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        run: python tts.py
       - name: Assemble videos
         env:
           CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}

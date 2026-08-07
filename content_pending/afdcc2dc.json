@@ -1,0 +1,23 @@
+{
+  "video_id": "afdcc2dc",
+  "created_at": "2026-08-07T21:47:23.382831+00:00",
+  "topic": "the_night_everything_changed",
+  "structure_id": "revenge_arc",
+  "beats": {
+    "hook": "I came home to find my best friend of eight years sitting in my apartment \u2014 with my boyfriend \u2014 and a stack of my bank statements on the table.",
+    "the_wrong": "She had been borrowing my login to \"check her balance.\" Turns out she'd been transferring small amounts \u2014 forty dollars here, sixty there \u2014 for almost a year. Eleven hundred dollars total.",
+    "the_plan": "I didn't confront her. I smiled. I told her I was so glad she was there \u2014 because I needed her help planning a surprise.",
+    "the_execution": "I'd already called the bank. The fraud hold was active. Her name was flagged. When she tried to use the joint account she'd quietly added herself to \u2014 the one she thought I didn't know about \u2014 her card declined. At the coffee shop. In front of her coworkers. The bank called me to confirm the block. I confirmed it.",
+    "the_satisfaction": "She texted me four times that afternoon. I read every one. Then I forwarded the transfer history to her mom \u2014 who had co-signed her lease. Here's what I still think about: my boyfriend knew. He saw the statements. He said nothing for three weeks. So what would you have done \u2014 deal with one betrayal at a time, or blow up both on the same day?",
+    "cta": "Drop your answer below \u2014 and if you want to know what happened with the boyfriend, tell me in the comments and I'll post part two."
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "outline_center_top",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 95,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/afdcc2dc_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/afdcc2dc_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/afdcc2dc_final.mp4"
+}

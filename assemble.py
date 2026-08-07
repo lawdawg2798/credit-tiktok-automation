@@ -29,10 +29,45 @@ BACKGROUND_FILES = {
 }
 
 CAPTION_STYLES = {
-    "bold_yellow_bottom": {"color": "&H0000D4FF", "alignment": 2, "marginv": 140},
+    # marginv=300 on a 1280px frame puts captions ~23% up from the bottom --
+    # clear of TikTok/Reels' own UI (username, caption, music ticker), which
+    # typically covers the bottom ~10-12% when a video is actually posted.
+    "bold_yellow_bottom": {"color": "&H0000D4FF", "alignment": 2, "marginv": 300},
     "clean_white_center": {"color": "&H00FFFFFF", "alignment": 5, "marginv": 0},
     "outline_center_top": {"color": "&H00FFFFFF", "alignment": 8, "marginv": 140},
 }
+
+# Accent color for emphasized words (bright red-orange), used across all
+# caption styles so key words visually pop regardless of the base style.
+EMPHASIS_COLOR = "&H00303BFF"   # ASS format &HAABBGGRR -> RGB approx (255,59,48)
+EMPHASIS_FONT_BUMP = 8          # emphasized words render slightly larger
+
+# Words/patterns that should be visually emphasized when they appear in a
+# caption -- names of dramatic beats, betrayal/conflict language, etc.
+# Numbers are always emphasized too (handled separately, not in this set).
+EMPHASIS_KEYWORDS = {
+    "cheating", "cheated", "affair", "cheater",
+    "fired", "quit", "quitting",
+    "lied", "liar", "lying",
+    "divorce", "divorced", "engaged", "wedding", "pregnant",
+    "secret", "secretly", "betrayed", "betrayal",
+    "stole", "stealing", "stolen", "scam", "scammed",
+    "arrested", "caught", "exposed", "confronted",
+    "threatened", "blackmail", "revenge",
+    "evicted", "kicked", "banned",
+    "died", "death", "killed",
+    "police", "lawyer", "court", "sued",
+}
+
+
+def is_emphasis_word(word):
+    """True if this word should render in the accent color/larger size."""
+    stripped = "".join(ch for ch in word if ch.isalnum())
+    if not stripped:
+        return False
+    if stripped.isdigit():
+        return True
+    return stripped.lower() in EMPHASIS_KEYWORDS
 
 FONT_SIZE = 30
 MIN_WORD_DUR = 0.22
@@ -111,6 +146,7 @@ def word_timings(all_words, total_dur):
 
 def build_ass(record, total_dur, ass_path, alignment=None):
     style = CAPTION_STYLES[record["caption_style"]]
+    emphasis_size = FONT_SIZE + EMPHASIS_FONT_BUMP
 
     header = f"""[Script Info]
 ScriptType: v4.00+
@@ -122,17 +158,20 @@ ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Default,DejaVu Sans,{FONT_SIZE},{style['color']},&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,{style['alignment']},20,20,{style['marginv']},1
+Style: Emphasis,DejaVu Sans,{emphasis_size},{EMPHASIS_COLOR},&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,{style['alignment']},20,20,{style['marginv']},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     lines = [header]
 
+    def dialogue_line(word, start, end):
+        style_name = "Emphasis" if is_emphasis_word(word) else "Default"
+        return f"Dialogue: 0,{fmt_ass_ts(start)},{fmt_ass_ts(end)},{style_name},,0,0,0,,{word.upper()}"
+
     if alignment:
         for word, start, end in words_from_alignment(alignment):
-            lines.append(
-                f"Dialogue: 0,{fmt_ass_ts(start)},{fmt_ass_ts(end)},Default,,0,0,0,,{word.upper()}"
-            )
+            lines.append(dialogue_line(word, start, end))
     else:
         full_text = " ".join(
             str(b).strip() for b in record["beats"].values() if str(b).strip()
@@ -144,9 +183,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             for word, d in zip(all_words, durs):
                 start, end = t, t + d
                 t = end
-                lines.append(
-                    f"Dialogue: 0,{fmt_ass_ts(start)},{fmt_ass_ts(end)},Default,,0,0,0,,{word.upper()}"
-                )
+                lines.append(dialogue_line(word, start, end))
 
     ass_path.write_text("\n".join(lines))
 

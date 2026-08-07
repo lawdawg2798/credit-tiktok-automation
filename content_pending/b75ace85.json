@@ -1,0 +1,23 @@
+{
+  "video_id": "b75ace85",
+  "created_at": "2026-08-06T23:55:02.655037+00:00",
+  "topic": "caught_cheating_plot_twist",
+  "structure_id": "slow_burn_reveal",
+  "beats": {
+    "hook": "I caught my boyfriend cheating. But the person he was cheating with? That's the part nobody sees coming.",
+    "normal_life": "Marcus and I had been together three years. We had a shared apartment, a dog named Pretzel, and plans to visit Portugal in the fall.",
+    "first_red_flag": "He started staying late at the gym. Like, suspiciously late. Then I noticed he'd changed his phone passcode and started taking calls in the bathroom. One night I found a receipt for a restaurant we had never been to together, dated a Tuesday when he told me he worked overtime.",
+    "the_reveal": "So I showed up at that restaurant on the next Tuesday. And there was Marcus. Sitting across from my older brother, Derek. Holding hands. Turns out they had been secretly together for four months and were terrified to tell me because they genuinely cared about each other and did not know how.",
+    "aftermath": "I will not lie, I ugly cried in that parking lot for a solid twenty minutes. But after a lot of hard conversations, I actually gave them my blessing. Derek is my brother. I want him happy. Marcus and I are cordial now, and honestly Pretzel likes Derek better anyway.",
+    "cta": "Drop a comment telling me what you would have done, and follow for more stories that absolutely nobody could make up."
+  },
+  "voice_profile": "voice_b",
+  "caption_style": "bold_yellow_bottom",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 58,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/b75ace85_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/b75ace85_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/b75ace85_final.mp4"
+}

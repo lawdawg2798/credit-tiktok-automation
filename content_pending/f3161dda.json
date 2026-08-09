@@ -1,0 +1,23 @@
+{
+  "video_id": "f3161dda",
+  "created_at": "2026-08-09T16:04:03.258601+00:00",
+  "topic": "the_ex_who_wouldn_t_let_go",
+  "structure_id": "revenge_arc",
+  "beats": {
+    "hook": "My ex showed up at my new apartment \u2014 six months after I'd blocked him on everything \u2014 holding a key.",
+    "the_wrong": "I never gave him that key. I found out later he'd followed me on move-in day. He watched from the parking lot and copied down the address.",
+    "the_plan": "I didn't call the police right away. I had a better idea \u2014 and it involved his mother, Carol.",
+    "the_execution": "I called Carol and told her calmly \u2014 very calmly \u2014 exactly what her son had done. The silence on her end lasted a full four seconds. Then I forwarded her the screenshots. Every \"I know where you live now\" text he'd sent from a number he thought I didn't recognize. Carol showed up to his place before the cops did.",
+    "the_satisfaction": "He called me that night \u2014 not to threaten me \u2014 to apologize. Turns out Carol had packed his things into garbage bags and left them on the front porch. I finally felt like I could breathe. Have you ever had someone in your life who thought obsession was the same thing as love?",
+    "cta": "Drop a one or a two in the comments \u2014 one if you've been there, two if you want to hear what Carol said to him. Because apparently it was legendary."
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "clean_white_center",
+  "background_category": "subtle_motion_graphics",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f3161dda_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f3161dda_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f3161dda_final.mp4"
+}

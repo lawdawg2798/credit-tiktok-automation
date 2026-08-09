@@ -1,0 +1,23 @@
+{
+  "video_id": "0d5dd1dc",
+  "created_at": "2026-08-09T16:04:28.330386+00:00",
+  "topic": "quit_job_no_notice_satisfying",
+  "structure_id": "slow_burn_reveal",
+  "beats": {
+    "hook": "I walked out of my job mid-shift \u2014 and I took something with me that made my manager's face go completely white.",
+    "normal_life": "I'd worked at that logistics company for four years. My manager, Derek, always called me his \"most reliable guy.\"",
+    "first_red_flag": "Then I found out he'd been taking credit for my quarterly reports \u2014 word for word \u2014 and presenting them to upper management as his own work.",
+    "the_reveal": "I only found out because one of the directors accidentally cc'd me on an email praising Derek for \"his brilliant analysis.\" The analysis I had written. Every single line of it.",
+    "aftermath": "So on a Tuesday afternoon, I packed my bag, walked to the printer, and pulled every original draft \u2014 timestamped, with my name in the metadata \u2014 and walked straight out the door. No two weeks. No email. Nothing. HR called me three days later. Turns out Derek had been doing this to two other people on the team. He was gone by Friday.",
+    "cta": "I kept all those documents \u2014 so what would you have done with them?"
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "bold_yellow_bottom",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/0d5dd1dc_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/0d5dd1dc_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/0d5dd1dc_final.mp4"
+}

@@ -1,0 +1,23 @@
+{
+  "video_id": "5b258a9f",
+  "created_at": "2026-08-09T16:04:37.100316+00:00",
+  "topic": "found_out_the_truth_too_late",
+  "structure_id": "hook_setup_incident_escalation_payoff",
+  "beats": {
+    "hook": "I gave a eulogy at my best friend's funeral. Three days later, I found out he was alive.",
+    "setup": "Marcus and I had been best friends since college. When I got the call that he'd died in a car accident \u2014 I didn't question it.",
+    "incident": "His \"sister\" reached out. Said the family wanted me to speak. I'd never met her before, but Marcus always said they were close. I stood at that podium and cried in front of two hundred strangers. That part still haunts me \u2014 because I don't think any of them actually knew him.",
+    "escalation": "A week later, a mutual friend sent me a photo. Marcus. Alive. Standing at an airport in another country. Turns out he owed money \u2014 a lot of it \u2014 to people who don't send collection notices. He faked his death. And he needed someone credible to make the funeral feel real. He chose me.",
+    "payoff": "I was the alibi. The grieving best friend who made everyone believe it. The \"sister\" was hired. The whole thing was staged \u2014 and I was the only one in that room who didn't know. The moment I understood that, something went quiet in me. Like a door closing.",
+    "cta": "I've never spoken to him again. But here's what I still can't answer \u2014 if he reached out tomorrow, would I turn him in? What would you do?"
+  },
+  "voice_profile": "voice_b",
+  "caption_style": "outline_center_top",
+  "background_category": "original_photos_slideshow",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 95,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/5b258a9f_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/5b258a9f_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/5b258a9f_final.mp4"
+}

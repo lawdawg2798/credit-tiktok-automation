@@ -1,0 +1,23 @@
+{
+  "video_id": "62bed573",
+  "created_at": "2026-08-09T16:04:46.661538+00:00",
+  "topic": "quit_job_no_notice_satisfying",
+  "structure_id": "revenge_arc",
+  "beats": {
+    "hook": "I walked out of my job mid-shift \u2014 and I took something with me that made my manager's face go completely white.",
+    "the_wrong": "For eight months, my manager Diane had been stealing my sales commissions. She'd reassign my closed deals to herself right before payroll processed \u2014 and HR told me there was \"nothing to investigate.\"",
+    "the_plan": "So I stopped reporting my closes to the system. I let them stack up \u2014 undocumented, unassigned, invisible. I was waiting for the right moment.",
+    "the_execution": "On a Friday afternoon \u2014 our busiest shift \u2014 I opened the shared drive. I copied every piece of documentation proving those deals were mine. Dates, client emails, call recordings. Months of it. Then I printed it all out, set it on Diane's keyboard, and walked to her office door. I said, \"I quit. Also \u2014 accounting just got a copy of that.\" Her face dropped. She actually reached for the papers before I was even out the door.",
+    "the_satisfaction": "By Monday, two other reps had come forward with the same complaint against her. I heard she was put on a formal investigation within the week. Would you have waited as long as I did \u2014 or would you have blown it up sooner?",
+    "cta": "Drop a comment: did I play it right, or did I let her off too easy for too long?"
+  },
+  "voice_profile": "voice_a",
+  "caption_style": "clean_white_center",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 58,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/62bed573_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/62bed573_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/62bed573_final.mp4"
+}

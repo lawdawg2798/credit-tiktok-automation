@@ -1,101 +1,110 @@
-# variation.yaml
-# Every pool below is a "slot machine" — each run randomly (weighted) picks
-# one option per category so consecutive videos don't share a fingerprint.
-# Add to these lists over time; more entries = less repetition = lower
-# originality-flag risk.
-
 script_structures:
-  # Different narrative arcs for dramatic Reddit-style stories.
-  - id: hook_setup_incident_escalation_payoff
-    order: [hook, setup, incident, escalation, payoff, cta]
-  - id: cold_open_ending_then_how
-    order: [ending_teaser, backstory, incident, escalation, resolution, cta]
-  - id: slow_burn_reveal
-    order: [hook, normal_life, first_red_flag, the_reveal, aftermath, cta]
-  - id: revenge_arc
-    order: [hook, the_wrong, the_plan, the_execution, the_satisfaction, cta]
-
-# Story TYPES, weighted toward the highest-engagement dramatic categories.
-# Each maps to a recognizable Reddit-story flavor.
+- id: hook_setup_incident_escalation_payoff
+  order:
+  - hook
+  - setup
+  - incident
+  - escalation
+  - payoff
+  - cta
+- id: cold_open_ending_then_how
+  order:
+  - ending_teaser
+  - backstory
+  - incident
+  - escalation
+  - resolution
+  - cta
+- id: slow_burn_reveal
+  order:
+  - hook
+  - normal_life
+  - first_red_flag
+  - the_reveal
+  - aftermath
+  - cta
+- id: revenge_arc
+  order:
+  - hook
+  - the_wrong
+  - the_plan
+  - the_execution
+  - the_satisfaction
+  - cta
 topics:
-  # revenge / malicious compliance (highest completion-rate pull)
-  - petty_revenge_on_bad_boss
-  - malicious_compliance_backfires_on_them
-  - pro_revenge_years_in_making
-  - neighbor_dispute_revenge
-  # relationship / cheating drama (biggest audience)
-  - caught_cheating_plot_twist
-  - wedding_ruined_by_family
-  - found_out_the_truth_too_late
-  - the_ex_who_wouldn_t_let_go
-  - in_laws_crossed_the_line
-  # entitled people / getting humbled
-  - entitled_customer_gets_karma
-  - entitled_parent_at_kids_event
-  - someone_tried_to_scam_me
-  - entitled_neighbor_property_line
-  # unsettling / true-story (retention + follow magnet)
-  - creepy_encounter_that_still_haunts_me
-  - trusted_the_wrong_person
-  - something_was_off_about_them
-  - the_night_everything_changed
-  # workplace / family betrayal
-  - quit_job_no_notice_satisfying
-  - family_secret_finally_exposed
-  - roommate_from_hell
-
-voice_profiles:        # rotate across ElevenLabs (or other TTS) voice IDs
-  - name: voice_a
-    provider_id: "Cz0K1kOv9tD8l0b5Qu53"
-    stability: 0.45
-    style: 0.35
-  - name: voice_b
-    provider_id: "DODLEQrClDo8wCz460ld"
-    stability: 0.55
-    style: 0.20
-  - name: voice_c
-    provider_id: "bD9maNcCuQQS75DGuteM"
-    stability: 0.40
-    style: 0.50
-
+- petty_revenge_on_bad_boss
+- malicious_compliance_backfires_on_them
+- pro_revenge_years_in_making
+- neighbor_dispute_revenge
+- caught_cheating_plot_twist
+- wedding_ruined_by_family
+- found_out_the_truth_too_late
+- the_ex_who_wouldn_t_let_go
+- in_laws_crossed_the_line
+- entitled_customer_gets_karma
+- entitled_parent_at_kids_event
+- someone_tried_to_scam_me
+- entitled_neighbor_property_line
+- creepy_encounter_that_still_haunts_me
+- trusted_the_wrong_person
+- something_was_off_about_them
+- the_night_everything_changed
+- quit_job_no_notice_satisfying
+- family_secret_finally_exposed
+- roommate_from_hell
+voice_profiles:
+- name: voice_a
+  provider_id: RXCCWbOxP7Hisa63Xsv5
+  stability: 0.3
+  style: 0.45
+  speed: 1.15
+- name: voice_b
+  provider_id: RXCCWbOxP7Hisa63Xsv5
+  stability: 0.3
+  style: 0.45
+  speed: 1.15
+- name: voice_c
+  provider_id: RXCCWbOxP7Hisa63Xsv5
+  stability: 0.3
+  style: 0.45
+  speed: 1.15
 caption_styles:
-  - id: bold_yellow_bottom
-    font: "Montserrat-Bold"
-    color: "#FFD400"
-    position: bottom
-    highlight_current_word: true
-  - id: clean_white_center
-    font: "Inter-SemiBold"
-    color: "#FFFFFF"
-    position: center
-    highlight_current_word: true
-  - id: outline_center_top
-    font: "Poppins-Bold"
-    color: "#FFFFFF"
-    outline_color: "#000000"
-    position: top
-    highlight_current_word: false
-
-background_pools:      # keep multiple distinct footage categories, not one loop
-  - category: soft_ambient_b_roll
-    clips_dir: "assets/backgrounds/soft_ambient"
-  - category: original_photos_slideshow
-    clips_dir: "assets/backgrounds/original_photos"
-  - category: subtle_motion_graphics
-    clips_dir: "assets/backgrounds/motion_graphics"
-  # NOTE: avoid generic "gameplay" background loops (Subway Surfers-style) —
-  # that specific pattern is the one most explicitly called out as
-  # "low-effort" in TikTok's originality guidance.
-
+- id: bold_yellow_bottom
+  font: Montserrat-Bold
+  color: '#FFD400'
+  position: bottom
+  highlight_current_word: true
+- id: clean_white_center
+  font: Inter-SemiBold
+  color: '#FFFFFF'
+  position: center
+  highlight_current_word: true
+- id: outline_center_top
+  font: Poppins-Bold
+  color: '#FFFFFF'
+  outline_color: '#000000'
+  position: top
+  highlight_current_word: false
+background_pools:
+- category: soft_ambient_b_roll
+  clips_dir: assets/backgrounds/soft_ambient
+- category: original_photos_slideshow
+  clips_dir: assets/backgrounds/original_photos
+- category: subtle_motion_graphics
+  clips_dir: assets/backgrounds/motion_graphics
 music_pools:
-  - category: low_key_lofi
-    dir: "assets/music/lofi"
-  - category: ambient_pad
-    dir: "assets/music/ambient"
-
-video_length_targets_seconds: [58, 70, 82, 95]   # vary length, avoid a fixed runtime
-
+- category: low_key_lofi
+  dir: assets/music/lofi
+- category: ambient_pad
+  dir: assets/music/ambient
+video_length_targets_seconds:
+- 58
+- 70
+- 82
+- 95
 posting_schedule:
-  times_local: ["09:15", "17:40"]  # jittered further at runtime by scheduler.py
-  timezone: "America/Chicago"
+  times_local:
+  - 09:15
+  - '17:40'
+  timezone: America/Chicago
   posts_per_day: 1

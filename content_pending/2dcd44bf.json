@@ -1,0 +1,23 @@
+{
+  "video_id": "2dcd44bf",
+  "created_at": "2026-08-16T15:51:09.053858+00:00",
+  "topic": "trusted_the_wrong_person",
+  "structure_id": "hook_setup_incident_escalation_payoff",
+  "beats": {
+    "hook": "My best friend of eight years used my salary information to get a loan in my name \u2014 and I only found out because a debt collector called me on my wedding day.",
+    "setup": "His name was Derek. We'd been close since college. I trusted him with everything.",
+    "incident": "Six months before the wedding, I'd vented to him about my raise \u2014 exact number, new employer, everything. Two weeks later, someone opened a personal loan for eleven thousand dollars using my details. I didn't know. The account went straight to collections.",
+    "escalation": "I started piecing it together. The loan was opened the same week I told him about the raise. The address on the application? His girlfriend's place. He'd used me as a financial stepping stone \u2014 and assumed I'd never check my credit before the honeymoon.",
+    "payoff": "I filed a police report that same afternoon. Derek was charged with identity fraud four months later. He pled guilty. The loan was discharged from my record. The last thing he sent me was a voicemail saying he thought I wouldn't notice. He actually said that.",
+    "cta": "Would you have pressed charges, or let it go to protect the friendship? Tell me below \u2014 because people are divided on this one."
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "clean_white_center",
+  "background_category": "subtle_motion_graphics",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 95,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2dcd44bf_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2dcd44bf_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2dcd44bf_final.mp4"
+}

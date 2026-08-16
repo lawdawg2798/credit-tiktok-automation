@@ -1,0 +1,23 @@
+{
+  "video_id": "aebb501a",
+  "created_at": "2026-08-16T15:50:48.178441+00:00",
+  "topic": "caught_cheating_plot_twist",
+  "structure_id": "hook_setup_incident_escalation_payoff",
+  "beats": {
+    "hook": "I didn't catch my boyfriend cheating. His mother did \u2014 and she told me in the worst possible way.",
+    "setup": "Marcus and I had been together three years. I thought we were six months from an engagement.",
+    "incident": "His mom, Linda, called me out of nowhere on a Tuesday afternoon. She said she needed to show me something in person. She drove forty minutes to my apartment \u2014 which should have told me everything.",
+    "escalation": "She handed me her phone. It was a screenshot of a conversation between Marcus and his coworker, Jade. They'd been together for eight months. But that wasn't the part that stopped my heart. The last message in the thread was Marcus telling Jade he was going to propose \u2014 to her \u2014 on the same trip he'd already told me was \"a getaway for us.\"",
+    "payoff": "I didn't cry. I just asked Linda why she came to me instead of confronting him directly. She looked me dead in the eye and said \u2014 \"Because you deserve better than my son. And I needed you to hear it from someone who means it.\" I walked into Marcus's apartment that night, left his key on the counter, and took the dog. He'd always said the dog was mine anyway.",
+    "cta": "Here's what I still think about \u2014 Linda and I grab coffee every other Sunday now. What would you have done? Stayed quiet, or taken the dog?"
+  },
+  "voice_profile": "voice_a",
+  "caption_style": "bold_yellow_bottom",
+  "background_category": "subtle_motion_graphics",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 58,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/aebb501a_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/aebb501a_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/aebb501a_final.mp4"
+}

@@ -1,0 +1,23 @@
+{
+  "video_id": "7e7f094d",
+  "created_at": "2026-08-16T15:50:32.023053+00:00",
+  "topic": "malicious_compliance_backfires_on_them",
+  "structure_id": "revenge_arc",
+  "beats": {
+    "hook": "My manager told me to follow the employee handbook \u2014 word for word, no exceptions. So I did. And it cost him forty-three thousand dollars.",
+    "the_wrong": "He'd been denying my overtime for months, just writing \"not pre-approved\" on my timesheets and pocketing the hours. When I brought it up, he slid the employee handbook across the desk and said, \"Everything you need is in there.\"",
+    "the_plan": "Fine. I read every single page. And that's when I found something he clearly hadn't counted on \u2014 a clause he'd never bothered to enforce.",
+    "the_execution": "The handbook required management to conduct a formal written review before rejecting any timesheet. Every. Single. Time. He'd skipped that step for three years \u2014 on my timesheets, and on everyone else's. I filed a wage complaint with the state labor board. I brought the handbook. I brought my records. I brought receipts going back to 2021.",
+    "the_satisfaction": "The audit covered the entire department. Twelve employees. Thirty-six months of unpaid hours. He had to repay all of it \u2014 out of the department budget he controlled. His budget was frozen for the next fiscal year, and he had to explain it to his own boss in writing. Here's what I still think about \u2014 he handed me that handbook like it was a weapon against me. Did he ever actually read it himself?",
+    "cta": "Drop a comment \u2014 have you ever used someone's own rules against them? Because I want to hear it."
+  },
+  "voice_profile": "voice_b",
+  "caption_style": "clean_white_center",
+  "background_category": "subtle_motion_graphics",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/7e7f094d_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/7e7f094d_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/7e7f094d_final.mp4"
+}

@@ -1,0 +1,23 @@
+{
+  "video_id": "2875ae9a",
+  "created_at": "2026-08-16T15:50:14.018327+00:00",
+  "topic": "quit_job_no_notice_satisfying",
+  "structure_id": "slow_burn_reveal",
+  "beats": {
+    "hook": "I quit my job in the middle of a client presentation. No notice. No two weeks. I just stood up, said \"I'm done,\" and walked out.",
+    "normal_life": "I had worked at that marketing agency for four years. My manager, Derek, always took credit for my campaigns \u2014 but I told myself that was just how it worked.",
+    "first_red_flag": "Then one Tuesday, I overheard Derek on the phone. He was pitching my entire Q4 strategy \u2014 word for word \u2014 to a headhunter. As his own work. For a job at a competitor.",
+    "the_reveal": "That presentation he made me run that afternoon? It was for the competitor's board. He was auditioning. Using my slides. With my name stripped off every single page.",
+    "aftermath": "I stood up mid-slide, looked Derek dead in the eye, and said \u2014 \"This campaign was mine. Good luck explaining that without me.\" Then I walked out. HR called the next day. So did Derek's new employer, after Derek's offer got pulled. Turns out the competitor wanted to verify the work. Derek couldn't answer a single question about it. I got a consulting offer from that same company two weeks later.",
+    "cta": "Would you have stayed and fought from the inside \u2014 or walked out exactly like I did? Drop it below."
+  },
+  "voice_profile": "voice_b",
+  "caption_style": "clean_white_center",
+  "background_category": "original_photos_slideshow",
+  "music_category": "ambient_pad",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2875ae9a_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2875ae9a_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/2875ae9a_final.mp4"
+}

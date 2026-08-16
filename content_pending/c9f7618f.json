@@ -1,0 +1,23 @@
+{
+  "video_id": "c9f7618f",
+  "created_at": "2026-08-16T15:50:39.468879+00:00",
+  "topic": "creepy_encounter_that_still_haunts_me",
+  "structure_id": "hook_setup_incident_escalation_payoff",
+  "beats": {
+    "hook": "The man outside my window had been standing there for three nights in a row \u2014 and he was wearing my dead father's coat.",
+    "setup": "I was 24, living alone in a rented house in rural Ohio. My dad had passed eight months earlier.",
+    "incident": "The first night I thought it was a shadow. The second night I turned on the porch light. He was just \u2014 standing at the tree line. Still. Facing the house. I told myself it was a neighbor. Then I remembered \u2014 I had buried my dad in that coat.",
+    "escalation": "I called my sister. She went quiet for a long time. Then she said our mom had donated a bag of Dad's clothes to the thrift store two weeks after the funeral. Without telling anyone. That coat could have been in that bag.",
+    "payoff": "I drove to the tree line the next morning. There was nothing there. No footprints. No broken branches. Nothing. But there was one thing \u2014 a single button. Dark brown. Vintage. I recognized it immediately. It was from that coat.",
+    "cta": "I still have the button. I've never gone back to that house. What would you have done \u2014 stayed, or left and never looked back?"
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "clean_white_center",
+  "background_category": "soft_ambient_b_roll",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/c9f7618f_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/c9f7618f_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/c9f7618f_final.mp4"
+}

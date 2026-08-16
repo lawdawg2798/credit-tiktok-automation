@@ -1,0 +1,23 @@
+{
+  "video_id": "f17483ee",
+  "created_at": "2026-08-16T21:39:41.453713+00:00",
+  "topic": "someone_tried_to_scam_me",
+  "structure_id": "hook_setup_incident_escalation_payoff",
+  "beats": {
+    "hook": "A stranger tried to sell me my own stolen car \u2014 and almost got away with it.",
+    "setup": "My name's not important. What matters is that three weeks before this, my car vanished from a parking garage in downtown Cleveland.",
+    "incident": "I filed a police report. Got nowhere. So I started checking Facebook Marketplace myself. Then I saw it \u2014 my green '09 Civic, same dent above the rear wheel, listed for eighteen hundred dollars. The seller's name was \"Mike T.\" What I couldn't figure out yet was how he knew to list it two cities away.",
+    "escalation": "I texted Mike. Played dumb. Asked if I could come see it in person. He said yes \u2014 gave me an address in Akron. Here's the part that still gets me: he asked me to bring cash and an ID. To buy my own car.",
+    "payoff": "I brought cash, alright. And two police officers. We pulled up. Mike was standing right there in the driveway \u2014 keys in hand. The officers ran the VIN before he could say a single word. It came back registered to me. Mike's face went completely white. I took my keys back on the spot.",
+    "cta": "He actually tried to negotiate with the cops. What would you have done \u2014 met him alone, or called it in like I did? Tell me in the comments."
+  },
+  "voice_profile": "voice_a",
+  "caption_style": "clean_white_center",
+  "background_category": "original_photos_slideshow",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 82,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f17483ee_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f17483ee_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/f17483ee_final.mp4"
+}

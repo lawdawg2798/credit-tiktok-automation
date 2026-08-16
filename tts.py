@@ -52,6 +52,10 @@ def synthesize_with_timestamps(text, voice):
             "stability": voice["stability"],
             "similarity_boost": 0.75,
             "style": voice["style"],
+            # speed > 1.0 tightens the delivery to match TikTok's punchy pace.
+            # 1.1 is a noticeable but still-natural speedup; the ElevenLabs
+            # valid range is 0.7-1.2. Bump toward 1.15 if still too slow.
+            "speed": voice.get("speed", 1.1),
         },
     }
     resp = requests.post(url, headers=headers, json=payload, timeout=60)

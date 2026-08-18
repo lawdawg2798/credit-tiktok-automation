@@ -1,0 +1,23 @@
+{
+  "video_id": "cb2fa36d",
+  "created_at": "2026-08-18T22:14:42.255794+00:00",
+  "topic": "neighbor_dispute_revenge",
+  "structure_id": "slow_burn_reveal",
+  "beats": {
+    "hook": "My neighbor called the cops on my kids' birthday party. So I made sure his illegal rental property got shut down \u2014 permanently.",
+    "normal_life": "Dale and I had lived side by side for three years without a single issue. He even waved to my daughter Mia on her way to school every morning.",
+    "first_red_flag": "Then we hosted Mia's seventh birthday. Fourteen kids, a pi\u00f1ata, and music that ended at six p.m. Dale called the police twice.",
+    "the_reveal": "While I was fuming that night, my husband noticed something \u2014 Dale's detached garage had three separate power meters, three doorbells, and curtains in every window. He was running an unlicensed rooming house. Had been for years.",
+    "aftermath": "I filed an anonymous tip with the city housing office. Gave them photos, dates, meter readings \u2014 everything. Six weeks later, Dale had an eviction notice on his garage door and a five-thousand-dollar fine in his mailbox. He never waved at Mia again. Honestly? Good.",
+    "cta": "Was this petty \u2014 or did Dale earn every bit of it? Drop your verdict below."
+  },
+  "voice_profile": "voice_c",
+  "caption_style": "outline_center_top",
+  "background_category": "subtle_motion_graphics",
+  "music_category": "low_key_lofi",
+  "target_length_seconds": 58,
+  "status": "video_ready",
+  "audio_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/cb2fa36d_voiceover.mp3",
+  "alignment_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/cb2fa36d_alignment.json",
+  "final_video_path": "/home/runner/work/credit-tiktok-automation/credit-tiktok-automation/content_pending/cb2fa36d_final.mp4"
+}

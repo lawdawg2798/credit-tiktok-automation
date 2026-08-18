@@ -54,20 +54,20 @@ topics:
 - roommate_from_hell
 voice_profiles:
 - name: voice_a
-  provider_id: RXCCWbOxP7Hisa63Xsv5
-  stability: 0.3
-  style: 0.45
-  speed: 1.15
+  provider_id: bfGb7JTLUnZebZRiFYyq
+  stability: 0.35
+  style: 0.4
+  speed: 1.12
 - name: voice_b
-  provider_id: RXCCWbOxP7Hisa63Xsv5
-  stability: 0.3
-  style: 0.45
-  speed: 1.15
+  provider_id: bfGb7JTLUnZebZRiFYyq
+  stability: 0.35
+  style: 0.4
+  speed: 1.12
 - name: voice_c
-  provider_id: RXCCWbOxP7Hisa63Xsv5
-  stability: 0.3
-  style: 0.45
-  speed: 1.15
+  provider_id: bfGb7JTLUnZebZRiFYyq
+  stability: 0.35
+  style: 0.4
+  speed: 1.12
 caption_styles:
 - id: bold_yellow_bottom
   font: Montserrat-Bold
